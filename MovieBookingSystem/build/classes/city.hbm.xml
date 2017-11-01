@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.mobicule.pojo.City" table="City_2">
+		<id name="cityName" column="City_Name">
+		 	<generator class="assigned" /> 
+		</id>
+
+
+
+		<set name="children" cascade="all">
+
+			<key column="City_Name" />
+			<one-to-many class="com.mobicule.pojo.Theater" />
+
+		</set>
+
+
+
+	</class>
+
+</hibernate-mapping> 

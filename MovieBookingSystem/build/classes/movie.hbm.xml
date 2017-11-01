@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+<hibernate-mapping>  
+<class name="com.mobicule.pojo.Movie" table="Movie_1">  
+        <id name="movieId" column="Movie_Id">  
+          <generator class="identity"></generator> 
+          </id>  
+            
+          <property name="movieName" column="Movie_Name"></property> 
+          <property name="seatAvailable" column="Available_Seats"></property>   
+          <property name="price" column="Price"></property> 
+          <property name="theaterId" column="Theater_Id"  insert="false" />
+          
+</class>  
+            
+</hibernate-mapping> 
