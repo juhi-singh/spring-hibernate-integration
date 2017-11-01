@@ -34,6 +34,7 @@ public class MovieDao {
 	public List getMovies(int theaterId) {
 
 		DetachedCriteria criteria = DetachedCriteria.forClass(Movie.class);
+		//DetachedCriteria criteria = DetachedCriteria.forClass(Movie.class);
 		criteria.add(Restrictions.eq("theaterId", theaterId));
 		List<Movie> moviesList = template.findByCriteria(criteria);
 
